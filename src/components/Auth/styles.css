@@ -1,0 +1,9 @@
+.card{
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: #F7F8F9;
+    padding: 1%;
+  }

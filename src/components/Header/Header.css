@@ -1,0 +1,39 @@
+/* Header.css */
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  margin-bottom: 16px;
+  border-radius: 20px;
+}
+
+nav a {
+  flex: 1 1 216px; /* Flex-grow, flex-shrink, flex-basis */
+  height: 54px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #2998FF;
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 20px;
+  transition: all 500ms ease;
+  
+}
+nav a:hover {
+  cursor: pointer;
+  background: #1b64a7;
+  transform: scale(1.1);
+  
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 768px) {
+  nav a {
+    flex: 1 1 auto; /* Позволяет кнопкам уменьшаться */
+    width: 100%;
+  }
+}

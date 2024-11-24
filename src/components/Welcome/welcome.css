@@ -1,0 +1,50 @@
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Светло-синий фон */
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .welcome-content {
+    max-width: 50%;
+  }
+  
+  .welcome-content h1 {
+    color:  #2998FF;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .welcome-content h2 {
+    color:  #2998FF;
+    font-size: 54px;
+    font-weight: 400;
+  }
+  
+  .welcome-content p {
+    color:  #2998FF;
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+  } 
+   .welcome-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+  }
+  @media (max-width: 992px) {
+    .welcome, .additional-info {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .welcome-content, .info-text {
+      max-width: 100%;
+    }
+  
+    .welcome-image, .info-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }}

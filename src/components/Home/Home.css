@@ -1,0 +1,416 @@
+.home {
+    
+    background-color: #f9f9f9;
+    border-radius: 20px;
+  }
+  
+  /* Приветственный блок */
+  .welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e3f2fd; /* Светло-синий фон */
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .welcome-content {
+    max-width: 50%;
+  }
+  
+  .welcome-content h1 {
+    color:  #2998FF;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .welcome-content h2 {
+    color:  #2998FF;
+    font-size: 54px;
+    font-weight: 400;
+  }
+  
+  .welcome-content p {
+    color:  #2998FF;
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+  }
+  
+  .cta-button {
+    background: #2998FF;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+
+
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .welcome-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+  }
+  
+  /* Интерактивные панели с темами */
+  .topics {
+    margin-bottom: 40px;
+  }
+  
+  .topics h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2998FF;
+    margin-bottom: 30px;
+  }
+  
+  .topics-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .topic-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .topic-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .topic-card h3 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .expand-button {
+    padding: 8px 12px;
+    background-color: #28a745; /* Зеленый цвет кнопки */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .expand-button:hover {
+    background-color: #218838;
+  }
+  
+  .topic-content {
+    margin-top: 15px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Свидетельства и сертификаты */
+  .certificates {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .certificates h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .certificates-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .certificate-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .certificate-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .certificate-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 0;
+  }
+  
+  /* Кнопки в разделе сертификатов */
+  .certificates-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .secondary-button {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Серый цвет кнопки */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .secondary-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Интересное в блоге */
+  .blog {
+    background-color: #2998FF;
+    padding: 40px 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .blog h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .blog-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    padding-bottom: 10px;
+  }
+  
+  .blog-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 300px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card h3 {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  .read-more-button {
+    padding: 8px 12px;
+    background-color: #17a2b8; /* Голубой цвет кнопки */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-button:hover {
+    background-color: #138496;
+  }
+  
+  /* Дополнительная секция с изображениями и текстом */
+  .additional-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff3e0; /* Светло-оранжевый фон */
+    padding: 40px;
+    border-radius: 8px;
+  }
+  
+  .info-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+  }
+  
+  .info-text {
+    max-width: 50%;
+  }
+  
+  .info-text h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .info-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .learn-more-button {
+    padding: 10px 20px;
+    background-color: #ffc107; /* Желтый цвет кнопки */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #e0a800;
+  }
+  
+  /* Новая секция "Оболочки" */
+  .wrappers {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .wrappers h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .wrappers-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .wrapper-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий цвет кнопки */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .wrapper-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .wrapper-button.active {
+    background-color: #0056b3; /* Темнее при активном состоянии */
+  }
+  
+  .wrappers-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .wrapper-info {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .wrapper-info h3 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .wrapper-info p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media (max-width: 992px) {
+    .welcome, .additional-info {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .welcome-content, .info-text {
+      max-width: 100%;
+    }
+  
+    .welcome-image, .info-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  
+    .topics-list, .certificates-list, .blog-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .topic-card, .certificate-card, .blog-card, .wrapper-button {
+      width: 90%;
+    }
+  
+    .blog-list {
+      overflow-x: scroll;
+      background-color: #2998FF;
+    }
+  
+    .wrappers-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .wrappers-content {
+      text-align: center;
+    }
+  
+    .wrapper-info {
+      text-align: center;
+    }
+  }

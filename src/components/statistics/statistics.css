@@ -1,0 +1,53 @@
+/* InfoStrip.css */
+.info-strip-container {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .info-strip-header {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .info-strip-subheader {
+    margin-bottom: 20px;
+    font-size: 1em;
+    font-style: italic;
+  }
+  
+  .info-strip {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .info-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+  }
+  
+  .info-item p {
+    margin: 0;
+    font-size: 1em;
+  }
+  
+  @media (max-width: 768px) {
+    .info-strip {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .info-item {
+      margin-bottom: 20px;
+    }
+  }
+  

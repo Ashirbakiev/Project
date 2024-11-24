@@ -1,0 +1,64 @@
+/* CardGrid.css */
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 148px;
+    padding: 20px;
+  }
+  
+  /* Установим фиксированные размеры для больших экранов */
+  .courses-block {
+    background-color: #007bff ;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 726px !;
+    height: 475px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 28px;
+
+  }
+  .courses-block h2{
+    color: white;
+    text-align: left;
+    font-size: 54px;
+    
+
+  }
+  .courses-block button{
+    background: #FFF;
+    color: #2998FF;
+    width: 200px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+
+  }
+  
+  @media (max-width: 1500px) {
+    /* Для экранов до 1500px уменьшаем размер карточек */
+    .courses-block {
+      width: auto;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 885px) {
+    /* Для маленьких экранов карточки будут в один столбик */
+    .courses-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .card {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
