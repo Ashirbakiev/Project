@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.highlight {
+  background: black;
+  color: white;
+}
+
+.highlight2 {
+  background: blue;
+  color: yellow;
+}

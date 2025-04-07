@@ -1,64 +1,78 @@
 import React, { useState } from 'react';
-import './Contact.css'; // Подключаем стили для Contact
+import Welcome from '../Welcome/welcome';
+import './Contact.css'; // Подключите стили
 
-function Contact() {
-  // Состояния для формы
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+const Contact = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const cities = [
+    'Москва',
+    'Санкт-Петербург',
+    'Новосибирск',
+    'Екатеринбург',
+    'Казань',
+    // Добавьте больше городов
+  ];
 
-  // Обработчик отправки формы
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Здесь можно добавить логику отправки данных
-    alert('Сообщение отправлено!');
-    // Сброс формы
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
+  const filteredCities = cities.filter(city =>
+    city.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const letters = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+  const numberOfLetters = 400;
+
+  // Генерация случайных букв с позициями и наклоном
+  const randomLetters = Array.from({ length: numberOfLetters }).map((_, index) => {
+    const letter = letters[Math.floor(Math.random() * letters.length)];
+    const left = Math.random() * 100;
+    const top = Math.random() * 450;
+    const rotate = Math.random() * 360;
+    const fontSize = Math.random() * 24 + 12;
+
+    return (
+      <div
+        key={index}
+        className="letter"
+        style={{
+          left: `${left}vw`,
+          top: `${top}vh`,
+          transform: `rotate(${rotate}deg)`,
+          fontSize: `${fontSize}px`,
+        }}
+      >
+        {letter}
+      </div>
+    );
+  });
 
   return (
-    <section className="contact">
-      <h2>Свяжитесь с нами</h2>
-      <form onSubmit={handleSubmit}>
-        {/* Поле имени */}
-        <div className="form-group">
-          <label htmlFor="name">Имя:</label>
-          <input 
-            type="text" 
-            id="name" 
-            value={name} 
-            onChange={(e) => setName(e.target.value)} 
-            required 
-          />
-        </div>
-        {/* Поле email */}
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input 
-            type="email" 
-            id="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-          />
-        </div>
-        {/* Поле сообщения */}
-        <div className="form-group">
-          <label htmlFor="message">Сообщение:</label>
-          <textarea 
-            id="message" 
-            value={message} 
-            onChange={(e) => setMessage(e.target.value)} 
-            required 
-          ></textarea>
-        </div>
-        {/* Кнопка отправки */}
-        <button type="submit">Отправить</button>
-      </form>
+    <section className="background" style={{paddingLeft:'150px',paddingRight:'150px',paddingTop:'74px'}}>
+      <div>
+      {randomLetters}
+      </div>
+    <div className='content'>
+    <Welcome />
+    <h2 style={{textAlign:'center',fontSize:"28px",color:"#2998FF",marginBottom:'30px',marginTop:'30px'}}>Контакты</h2>
+    <h2 style={{textAlign:'center',fontSize:"28px",color:"#2998FF",marginBottom:'30px',marginTop:'30px'}}>ВЫБЕРИТЕ ГОРОД</h2>
+    <input
+        type="text"
+        className="search-box"
+        placeholder="Поиск города"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        />
+    <div className="city-container">
+    <div className="city-selector">
+      
+      
+      
+      <ul className="city-list" >
+        {filteredCities.map((city, index) => (
+          <li key={index}>{city}</li>
+        ))}
+      </ul>
+    </div></div>
+    </div>
     </section>
   );
-}
+};
 
 export default Contact;

@@ -2,6 +2,31 @@
     
     background-color: #f9f9f9;
     border-radius: 20px;
+    position: relative;
+    z-index: 2; /* Основной контент поверх букв */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для контента */
+  }
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .letter {
+    position: absolute;
+    color: #2998FF; /* Прозрачность букв */
+    user-select: none; /* Запрет на выделение текста */
+    z-index: 1; /* Буквы на фоне */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2; /* Основной контент поверх букв */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* Полупрозрачный фон для контента */
   }
   
   /* Приветственный блок */

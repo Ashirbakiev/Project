@@ -27,18 +27,23 @@ img {
 
 
 .memotest {
+
+
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+  
 }
 
 .memotest-box {
   display: inline-block;
   border: 2px solid darkred;
   margin: 10px;
-  width: 135px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   border-radius: 10px;
+  background: linear-gradient(360deg, #195B99 25%, #2998FF 47%);
+
 }
 
 .memotest-box img:not(.hide) {
@@ -58,3 +63,6 @@ img {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

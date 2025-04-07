@@ -7,7 +7,7 @@ import CardGrid from '../CardGrid/CardGrid';
 import CarouselWrapper from '../CarouselWrapper';
 import Welcome from '../Welcome/welcome';
 import Statistics from '../statistics/statistics';
-
+import BackgroundLetters from '../BackgroundLetters/BackgroundLetters';
 
 function Home() {
   const [activeWrapper, setActiveWrapper] = useState(null); // Новое состояние для оболочек
@@ -69,9 +69,40 @@ function Home() {
       setActiveWrapper(id);
     }
   };
+  const letters = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+  const numberOfLetters = 400;
+
+  // Генерация случайных букв с позициями и наклоном
+  const randomLetters = Array.from({ length: numberOfLetters }).map((_, index) => {
+    const letter = letters[Math.floor(Math.random() * letters.length)];
+    const left = Math.random() * 100;
+    const top = Math.random() * 300;
+    const rotate = Math.random() * 360;
+    const fontSize = Math.random() * 24 + 12;
+
+    return (
+      <div
+        key={index}
+        className="letter"
+        style={{
+          left: `${left}vw`,
+          top: `${top}vh`,
+          transform: `rotate(${rotate}deg)`,
+          fontSize: `${fontSize}px`,
+        }}
+      >
+        {letter}
+      </div>
+    );
+  });
 
   return (
-    <main className="home">
+    <div className="background">
+      <div>
+      {randomLetters}
+      </div>
+      <div className="content">
+      <div style={{paddingLeft:'150px',paddingRight:'150px',paddingTop:'74px'}}>
       {/* Приветственный блок */}
       <Welcome/>
       {/* Интерактивные панели с темами */}
@@ -79,7 +110,7 @@ function Home() {
         <h2>Программы</h2>
         <CardGrid />
       </section>
-
+      </div>
       <Statistics/>
       {/* Свидетельства и сертификаты */}
       <section className="certificates">
@@ -100,8 +131,7 @@ function Home() {
         <h2>Интересное в блоге</h2>
         <CarouselWrapper />
       </section>
-      <Map />
-      {/* Дополнительная секция с изображениями и текстом */}
+ {/*   <Map />
       <section className="additional-info">
         <div className="info-image">
           <img src="https://via.placeholder.com/500x300" alt="Дополнительная информация" />
@@ -115,9 +145,10 @@ function Home() {
           <button className="learn-more-button">Узнать больше</button>
         </div>
       </section>
-      {/* Новая секция "Оболочки" */}
+      {/* Новая секция "Оболочки" */}  
       
-    </main>
+    </div>
+    </div>
   );
 }
 

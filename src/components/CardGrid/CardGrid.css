@@ -8,14 +8,16 @@
   
   /* Установим фиксированные размеры для больших экранов */
   .courses-block {
+    
     background-color: #007bff ;
+    background: linear-gradient(180deg, #2998FF 47%, #195B99 100%);
+
     color: white;
     padding: 20px;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 726px !;
+    width: 726px!;
     height: 475px;
     box-sizing: border-box;
     text-align: left;
